@@ -8,15 +8,15 @@ namespace memes1125
     {
          public string name { get; set; }
         public DateTime Birthday { get; set; }
-        public string Name ;
-        public DateTime birthday ;
+        public Cat() { string Name = name; DateTime birthday = Birthday; }
         public int GatAge;
+        
         
        
         public void MakeNoise()
         {
          
-            Console.WriteLine($"{Name} мяукает ");
+            Console.WriteLine($"{name} мяукает ");
         }
         
     }
