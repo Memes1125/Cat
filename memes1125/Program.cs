@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Net.Http.Headers;
 using System.Net.NetworkInformation;
+using System.IO;
 
 namespace memes1125
 {
@@ -8,19 +9,10 @@ namespace memes1125
     {
         static void Main(string[] args)
         {
-            Cat cat = new Cat();
-            cat.name = " Marusia";
-            cat.MakeNoise();
-            
-            
-
-
-
-
-            cat.GatAge = 30;
-            string name = cat.name;
-            
-            Console.WriteLine($"Кошке по имени{cat.name} уже {cat.GatAge} лет");
+            Cat cat = new Cat("Marusia",new DateTime(2001,03,05));
+            cat.Makenois();
+            cat.HungryStatus = 150;
+            Console.WriteLine($"Кошке по имени{cat.Name} уже {cat.GatAge()} лет");
             
 
             
