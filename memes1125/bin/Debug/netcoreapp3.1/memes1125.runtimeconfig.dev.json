@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\pokim\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\pokim\\.nuget\\packages"
+    ]
+  }
+}

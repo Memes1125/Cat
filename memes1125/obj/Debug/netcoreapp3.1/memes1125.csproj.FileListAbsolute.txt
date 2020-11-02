@@ -1,0 +1,13 @@
+C:\Users\pokim\source\repos\memes1125\memes1125\obj\Debug\netcoreapp3.1\memes1125.csprojAssemblyReference.cache
+C:\Users\pokim\source\repos\memes1125\memes1125\obj\Debug\netcoreapp3.1\memes1125.AssemblyInfoInputs.cache
+C:\Users\pokim\source\repos\memes1125\memes1125\obj\Debug\netcoreapp3.1\memes1125.AssemblyInfo.cs
+C:\Users\pokim\source\repos\memes1125\memes1125\obj\Debug\netcoreapp3.1\memes1125.csproj.CoreCompileInputs.cache
+C:\Users\pokim\source\repos\memes1125\memes1125\bin\Debug\netcoreapp3.1\memes1125.exe
+C:\Users\pokim\source\repos\memes1125\memes1125\bin\Debug\netcoreapp3.1\memes1125.deps.json
+C:\Users\pokim\source\repos\memes1125\memes1125\bin\Debug\netcoreapp3.1\memes1125.runtimeconfig.json
+C:\Users\pokim\source\repos\memes1125\memes1125\bin\Debug\netcoreapp3.1\memes1125.runtimeconfig.dev.json
+C:\Users\pokim\source\repos\memes1125\memes1125\bin\Debug\netcoreapp3.1\memes1125.dll
+C:\Users\pokim\source\repos\memes1125\memes1125\bin\Debug\netcoreapp3.1\memes1125.pdb
+C:\Users\pokim\source\repos\memes1125\memes1125\obj\Debug\netcoreapp3.1\memes1125.dll
+C:\Users\pokim\source\repos\memes1125\memes1125\obj\Debug\netcoreapp3.1\memes1125.pdb
+C:\Users\pokim\source\repos\memes1125\memes1125\obj\Debug\netcoreapp3.1\memes1125.genruntimeconfig.cache
