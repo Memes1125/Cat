@@ -13,8 +13,8 @@ namespace memes1125
             cat.Makenois();
             cat.HungryStatus = 150;
             Console.WriteLine($"Кошке по имени{cat.Name} уже {cat.GatAge()} лет");
-            
 
+            Console.ReadLine();
             
         }
     }

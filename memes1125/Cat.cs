@@ -14,7 +14,7 @@ namespace memes1125
         public Cat(string name, DateTime birthday)
         {
             Name = name;
-            Birthday = birthday;
+            Birthday = birthday; 
             Task.Run(LifeCircle);
         }
         public string Name { get; set; }
@@ -71,7 +71,7 @@ namespace memes1125
             }
             else if (HungryStatus > 90)
             {
-                Console.ForegroundColor = ConsoleColor.DarkRed;
+                Console.ForegroundColor = ConsoleColor.Green;
                 Console.WriteLine("Кошка недавно поела ");
             }
             Console.ResetColor();
@@ -79,9 +79,11 @@ namespace memes1125
       
       async Task LifeCircle()
         {
+
             await Task.Delay(10000);
             HungryStatus -= 10;
             GetStatus();
+            Task.Run(LifeCircle);
             if (HungryStatus == 0)
             {
                 Console.ForegroundColor = ConsoleColor.Black;
@@ -89,6 +91,7 @@ namespace memes1125
             }
             else
                 await LifeCircle();
+            
         }
 
 
