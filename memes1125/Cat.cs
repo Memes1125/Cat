@@ -10,7 +10,15 @@ namespace memes1125
     class Cat
     {
 
+
+        
+        public event EventHandler HungryStatusChanged;
         byte _hungryStatus;
+
+        public void Feed()
+        {
+            HungryStatus = 100;
+        }
         public Cat(string name, DateTime birthday)
         {
             Name = name;
@@ -36,13 +44,20 @@ namespace memes1125
                 if (value < 0)
                 {
                     _hungryStatus = 0;
+                    HungryStatusChanged?.Invoke(this, null);
                 }
                 else if (value > 100)
                 {
                     _hungryStatus = 100;
+                    HungryStatusChanged?.Invoke(this, null);
                 }
                 else
+                {
                     _hungryStatus = value;
+                    HungryStatusChanged?.Invoke(this, null);
+                }
+              
+
             }
         }
         public void GetStatus()
@@ -82,8 +97,8 @@ namespace memes1125
 
             await Task.Delay(10000);
             HungryStatus -= 10;
-            GetStatus();
-            Task.Run(LifeCircle);
+            
+
             if (HungryStatus == 0)
             {
                 Console.ForegroundColor = ConsoleColor.Black;
@@ -94,7 +109,7 @@ namespace memes1125
             
         }
 
-
+        
 
     }
 }
