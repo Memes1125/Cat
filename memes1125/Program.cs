@@ -2,6 +2,8 @@
 using System.Net.Http.Headers;
 using System.Net.NetworkInformation;
 using System.IO;
+using System.Security.Cryptography.X509Certificates;
+using System.Collections.Generic;
 
 namespace memes1125
 {
@@ -15,9 +17,10 @@ namespace memes1125
             cat.Makenois();
             cat.HungryStatus = 150;
 
-            cat.HungryStatusChanged += delegatt;
-            cat1.HungryStatusChanged += delegatt ;
-          
+            
+            
+            
+            
             Console.WriteLine($"Кошке по имени{cat.Name} уже {cat.GatAge()} лет");
 
             
@@ -26,16 +29,8 @@ namespace memes1125
             Console.ReadLine();
             
         }
-        private static void delegatt(object sender, EventArgs e)
-        {
-
-            Random rnd = new Random();
-            Cat cat = (Cat)sender;
-            if (cat.HungryStatus < 20 && rnd.Next(0, 10) < 5)
-                cat.Feed();
-            else
-                cat.GetStatus();
-        }
-      
+       
+       
+        
     }
 }
