@@ -12,20 +12,25 @@ namespace memes1125
         static void Main(string[] args)
         {
 
-            Cat cat1 = new Cat("Marisia", new DateTime(2000,03,08));
+            Cat cat1 = new Cat("Ne_Marusia", new DateTime(2000,03,08));
             Cat cat = new Cat("Marusia",new DateTime(2001,03,05));
             cat.Makenois();
             cat.HungryStatus = 150;
 
-            
-            
-            
-            
+
+
+
+            CatSmartHouse catSmartH = new CatSmartHouse();
+            catSmartH.AddCat(cat1);
+            catSmartH.AddCat(cat);
+
+
+
             Console.WriteLine($"Кошке по имени{cat.Name} уже {cat.GatAge()} лет");
 
-            
 
 
+            Console.SetCursorPosition(0, 3 + 1);
             Console.ReadLine();
             
         }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using System.Text;
@@ -62,36 +63,40 @@ namespace memes1125
 
             }
         }
-        public void GetStatus()
+        public  string GetStatus() 
         {
+
+            
             Console.WriteLine(Name);
             Console.WriteLine($"Возраст {GatAge()}");
             if(HungryStatus <= 10)
             {
                 Console.ForegroundColor = ConsoleColor.DarkRed;
-                Console.WriteLine("Кошка умерает от голода ");
+                return  $"{Name} ,{GatAge()}, Кошка умерает от голода ";
             }
             else if (HungryStatus > 10 && HungryStatus <= 40)
             {
                 Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine("Кошка очень голодна");
+               return $"{Name} ,{GatAge()},Кошка очень голодна";
             }
             else if(HungryStatus > 40 && HungryStatus <= 70)
             {
                 Console.ForegroundColor = ConsoleColor.DarkYellow;
-                Console.WriteLine("Кошка хочет кушать ");
+                return $"{Name} ,{GatAge()},Кошка хочет кушать ";
             }
             else if(HungryStatus > 70 && HungryStatus <= 90)
             {
                 Console.ForegroundColor = ConsoleColor.Yellow;
-                Console.WriteLine("Кошка не против перекусить ");
+                return $"{Name} ,{GatAge()},Кошка не против перекусить ";
             }
             else if (HungryStatus > 90)
             {
                 Console.ForegroundColor = ConsoleColor.Green;
-                Console.WriteLine("Кошка недавно поела ");
+                return $"{Name} ,{GatAge()},Кошка недавно поела ";
             }
             Console.ResetColor();
+            return GetStatus();
+            
         }
       
       async Task LifeCircle()
