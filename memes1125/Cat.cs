@@ -14,9 +14,10 @@ namespace memes1125
 
         
         public event EventHandler HungryStatusChanged;
-        byte _hungryStatus;
 
-        public  void Feed(byte needfood)
+        sbyte _hungryStatus;
+
+        public  void Feed(sbyte needfood)
         {
             
             HungryStatus += needfood;
@@ -39,7 +40,7 @@ namespace memes1125
         {
             return (DateTime.Today - Birthday).Days / 365;
         }
-        public byte HungryStatus
+        public sbyte HungryStatus
         {
             get { return _hungryStatus; }
             set
