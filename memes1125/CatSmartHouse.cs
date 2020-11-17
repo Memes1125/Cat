@@ -15,14 +15,13 @@ namespace memes1125
 
         public int CatsCount {get; set;}
 
+        
 
-
-        public static void PrintStatus()
+        public static void PrintStatus(object sander, EventArgs e)
         {
             lock (printing)
             {
-                Cat cat3 = new Cat("Ne_Ne_Marusia", new DateTime(2011, 02, 30));
-
+                var cat1 = (Cat)sander;
                 int leftPosition = Console.CursorLeft;
                 int topPosition = Console.CursorTop;
                 for (int i = 0; i < 3; i++)
@@ -30,7 +29,7 @@ namespace memes1125
                     string color = null;
                     string message = null;
 
-                    message = cat3.GetStatus();
+                    message =  cat1.GetStatus();
                     color = color.Substring(0, 2);
                     color.Replace(" ", "");
                     char[] characters = color.ToCharArray();
@@ -97,7 +96,7 @@ namespace memes1125
                     FoodResource = 0;
                 }
                 cat.Feed(needFood);
-                PrintStatus();
+                PrintStatus(sender,e);
             }
         }
     }

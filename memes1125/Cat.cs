@@ -64,7 +64,7 @@ namespace memes1125
 
             }
         }
-        public  string GetStatus() 
+        public string GetStatus() 
         {
             if(HungryStatus <= 10)
             {

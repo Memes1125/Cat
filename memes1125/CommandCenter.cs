@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Globalization;
+using System.Runtime.CompilerServices;
 using System.Text;
 
 namespace memes1125
@@ -27,6 +29,8 @@ namespace memes1125
                 }
             }
             command = Console.ReadLine();
+            
+
             switch (command)
             {
                 case "Clear":
@@ -45,17 +49,32 @@ namespace memes1125
             
 
         }
-
+       
         private void HungryLimit()
         {
-            Cat cat4 = new Cat("Anton", new DateTime(2015, 02, 04));
-            int corm = Int32.Parse(cat4.GetStatus());
-            corm += Int32.Parse(cat4.GetStatus());
+            object sender = null;
+            var cat = (Cat)sender;
+            if ((cat.HungryStatus > 10) || (cat.HungryStatus > 40) ||
+                (cat.HungryStatus > 70) || (cat.HungryStatus > 90))
+            {
+                cat.HungryStatus++;
+                Console.WriteLine("Кошка покормлена");
+
+                return;
+            }
+
+
         }
-
-        public CommandCenter(CatSmartHouse catSmart)
+        public List<Cat> cats = new List<Cat>();
+        public void AddCat(Cat cat)
         {
+            cats.Add(cat);
 
+        }
+        public CommandCenter(CatSmartHouse catSmartH)
+        {
+            
+            
 
 
             WaitCommands();
